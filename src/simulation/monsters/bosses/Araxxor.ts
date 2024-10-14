@@ -2,6 +2,7 @@ import LootTable from "../../../structures/LootTable";
 import SimpleMonster from "../../../structures/SimpleMonster";
 import RareDropTable from "../../subtables/RareDropTable";
 import TreeHerbSeedTable from "../../subtables/TreeHerbSeedTable";
+import { araxxorLogic } from "../../../util";
 
 const AraxxorUniqueTable = new LootTable()
 	.add("Araxyte fang")
@@ -15,6 +16,7 @@ const SupplyDrop = new LootTable()
 	.add(new LootTable().add("Wild pie", [2, 3]).add("Shark", [2, 3]));
 
 const AraxxorTable = new LootTable()
+	.tertiary(50, "Clue scroll (elite)")
 	.tertiary(200, "Coagulated venom")
 	.tertiary(150, AraxxorUniqueTable)
 	.tertiary(250, "Araxyte head")
@@ -65,4 +67,5 @@ export const Araxxor = new SimpleMonster({
 	name: "Araxxor",
 	table: AraxxorTable,
 	aliases: ["araxxor"],
+	customKillLogic: araxxorLogic,
 });

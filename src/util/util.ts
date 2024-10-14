@@ -207,6 +207,15 @@ export function makeRevTable(table: RevTable): CustomKillLogic {
 	};
 }
 
+export function araxxorLogic(options: MonsterKillOptions, currentLoot: Bank) {
+	if (options.destroyLoot) {
+		currentLoot.filter((item: Item) => item.name == 'Clue Scroll (elite)' || item.name == 'Nid')
+		if (!currentLoot.has('Nid') && roll(3000)){
+			currentLoot.add('Nid')
+		}
+	}
+}
+
 /**
  * Adds random variation to a number. For example, if you pass 10%, it can at most lower the value by 10%,
  * or increase it by 10%, and everything in between.
