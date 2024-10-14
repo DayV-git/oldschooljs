@@ -207,6 +207,7 @@ export interface MonsterKillOptions {
     inCatacombs?: boolean;
     inWilderness?: boolean;
     onSlayerTask?: boolean;
+    destroyLoot?: boolean;
     slayerMaster?: MonsterSlayerMaster;
     hasSuperiors?: SimpleMonster;
     farmingLevel?: number;
