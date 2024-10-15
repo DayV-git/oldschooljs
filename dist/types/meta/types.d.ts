@@ -205,9 +205,9 @@ export interface BankItem {
 export type TupleLootItem = [number, number];
 export interface MonsterKillOptions {
     inCatacombs?: boolean;
+    destroyLoot?: boolean;
     inWilderness?: boolean;
     onSlayerTask?: boolean;
-    destroyLoot?: boolean;
     slayerMaster?: MonsterSlayerMaster;
     hasSuperiors?: SimpleMonster;
     farmingLevel?: number;

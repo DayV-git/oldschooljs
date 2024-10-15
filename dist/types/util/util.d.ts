@@ -1,5 +1,6 @@
 import { type hiscoreURLs } from "../constants";
-import type { CustomKillLogic, Item } from "../meta/types";
+import type { CustomKillLogic, Item, MonsterKillOptions } from "../meta/types";
+import type Bank from "../structures/Bank";
 import LootTable from "../structures/LootTable";
 import type Player from "../structures/Player";
 export declare function resolvePlayerFromHiscores(csvData: string, accountType: keyof typeof hiscoreURLs): Player;
@@ -24,6 +25,7 @@ export interface RevTable {
 type RevTableItem = [number, number];
 export declare const revsUniqueTable: LootTable;
 export declare function makeRevTable(table: RevTable): CustomKillLogic;
+export declare function araxxorLogic(options: MonsterKillOptions, currentLoot: Bank): void;
 export declare function randomVariation(value: number, percentage: number): number;
 export declare function getItem(itemName: string | number | undefined): Item | null;
 export declare function getItemOrThrow(itemName: string | number | undefined): Item;

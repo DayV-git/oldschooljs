@@ -291,7 +291,7 @@ export interface MonsterKillOptions {
 	 * This is *true* if the monster is being killed inside the catacombs.
 	 */
 	inCatacombs?: boolean;
-		/**
+	/**
 	 * This is *true* if the monster is Araxxor with 'destroy loot' modifier.
 	 */
 	destroyLoot?: boolean;
