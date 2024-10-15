@@ -1,8 +1,8 @@
 import LootTable from "../../../structures/LootTable";
 import SimpleMonster from "../../../structures/SimpleMonster";
+import { araxxorLogic } from "../../../util";
 import RareDropTable from "../../subtables/RareDropTable";
 import TreeHerbSeedTable from "../../subtables/TreeHerbSeedTable";
-import { araxxorLogic } from "../../../util";
 
 const AraxxorUniqueTable = new LootTable()
 	.add("Araxyte fang")
