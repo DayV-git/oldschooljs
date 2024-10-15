@@ -209,7 +209,7 @@ export function makeRevTable(table: RevTable): CustomKillLogic {
 
 export function araxxorLogic(options: MonsterKillOptions, currentLoot: Bank) {
 	if (options.destroyLoot) {
-		currentLoot.filter((item: Item) => item.name === "Clue Scroll (elite)" || item.name === "Nid");
+		currentLoot.filter(i => Boolean(i.name === "Clue Scroll (elite)" || i.name === "Nid"));
 		if (!currentLoot.has("Nid") && roll(3000)) {
 			currentLoot.add("Nid");
 		}
