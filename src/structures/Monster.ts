@@ -3,7 +3,7 @@ import type { MonsterData } from "../meta/monsterData";
 import type { MonsterKillOptions, MonsterOptions } from "../meta/types";
 import type Bank from "./Bank";
 
-const monsterData = rawMonsterData as { [key: string]: MonsterData };
+const monsterData = rawMonsterData as unknown as { [key: string]: MonsterData };
 
 export default abstract class Monster {
 	public id: number;
