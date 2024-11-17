@@ -1,16 +1,16 @@
 import type { CustomKillLogic, MonsterKillOptions, MonsterOptions } from "../meta/types";
 import Bank from "./Bank";
-import type LootTable from "./LootTable";
+import LootTable from "./LootTable";
 import Monster from "./Monster";
 interface SimpleMonsterOptions extends MonsterOptions {
-    table?: LootTable;
+    table?: LootTable | LootTable[];
     onTaskTable?: LootTable;
     wildyCaveTable?: LootTable;
     pickpocketTable?: LootTable;
     customKillLogic?: CustomKillLogic;
 }
 export default class SimpleMonster extends Monster {
-    table?: LootTable;
+    table?: LootTable | LootTable[];
     onTaskTable?: LootTable;
     wildyCaveTable?: LootTable;
     pickpocketTable?: LootTable;

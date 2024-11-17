@@ -23,6 +23,7 @@ export declare function isArrayOfItemTuples(x: readonly unknown[]): x is [string
 export interface LootTableRollOptions {
     tertiaryItemPercentageChanges?: Map<string, number>;
     targetBank?: Bank;
+    table?: number;
 }
 export default class LootTable {
     length: number;
